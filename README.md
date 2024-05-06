@@ -4,3 +4,5 @@ Code files for the experimentation phase of the manuscript:
 
 Requirements: To create the graphs in Simulations.R, the library ggplot is needed
 Simulations.R uses the algorithms implemented in Algorithms.R
+
+Author: Rosario Delgado, Universitat Autònoma de Barcelona
