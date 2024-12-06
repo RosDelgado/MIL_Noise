@@ -7,11 +7,13 @@ The Colon Cancer dataset can be downloaded from
 https://drive.google.com/file/d/1RcNlwg0TwaZoaFO0uMXHFtAo_DCVPE6z/view
 (credit to Dr. Jiawen Yao)
 
-We make preprocessing of images and predictions with the CausalMIL algorithm, which 
-can be accessed to at https://github.com/WeijiaZhang24/CausalMIL
-The predictions at the instance-level obtained by applying the CausalMIL algorithm to Colon Cancer 
-dataset were saved into file: "expanded_results_2.csv". 
+This repository provides images' patches predictions using the CausalMIL algorithm, which 
+can be accessed at https://github.com/WeijiaZhang24/CausalMIL
 
-File "Colon_cancer_r_rule.R" loads this CSV file and apply standard (c=1) and c-rule to the assigned labels
-to the instances, in order to obtain the assigned labels for the bags.
-Then, compare Accuracy, Balanced Accuracy and F1-score for the two procedures, based on a 5-fold cross-validation. 
+The instance-level predictions obtained by applying the CausalMIL algorithm to the Colon Cancer 
+dataset have been stored in the file: "expanded_results_2.csv". The implementation of this tak in PyTorch was developed by 
+Xavier-Andoni Tibau, to whom we express my deep gratitute. 
+
+The script "Colon_cancer_r_rule.R" loads the CSV file and applies both the standard rule (c=1) and the proposed "c-rule" to the assigned instance labels
+to determine the bag-level labels.
+It then compares the Accuracy, Balanced Accuracy, and F1-score of these two procedures, based on a 5-fold cross-validation. 
